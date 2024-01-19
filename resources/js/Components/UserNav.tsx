@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from '@inertiajs/react';
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/Components/ui/avatar';
 import { Button } from '@/Components/ui/button';
 import {
@@ -54,12 +56,12 @@ export function UserNav({
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <a href={route('profile.show')}>
+          <Link href={route('profile.show')}>
             <DropdownMenuItem>
               Profile
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
-          </a>
+          </Link>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={logout}>
